@@ -1,4 +1,5 @@
 from typing import List
+import secrets
 
 def partition(numbers:List[int],low:int,high:int) -> int:
     i=low-1
@@ -22,6 +23,5 @@ def quick_sort(numbers:List[int]) ->List[int]:
 
 
 if __name__ == '__main__':
-    import random
-    num =[random.randint(0,1000) for _ in range(10)]
+    num =[secrets.SystemRandom().randint(0,1000) for _ in range(10)]
     print(quick_sort(num))
